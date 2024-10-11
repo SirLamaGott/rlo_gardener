@@ -1,6 +1,5 @@
 # rlo_gardener
-
-This script offers a dynamic gardening job experience for the ESX Framework in FiveM. Players can take on various gardening tasks, such as weeding, tree trimming, and lawn mowing. The script includes a configurable daily task limit, experience, and payout system, as well as customizable task locations.
+This script offers a dynamic gardening job experience for the ESX Framework in FiveM. Players can take on various gardening tasks, such as weeding, tree trimming, and lawn mowing. The script includes a experience and level system, and payout system, as well as customizable task locations.
 
 ## Features
 
