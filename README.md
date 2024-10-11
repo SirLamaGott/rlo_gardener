@@ -35,7 +35,6 @@ Config.DrawDistance = 50 -- Zone render distance
 Config.ExperiencePerPoint = 10 -- Experience points per completed task
 Config.MoneyPerPoint = 50 -- Payout per garden point
 
-Config.DailyTaskLimit = 10 -- Maximum number of tasks per day
 Config.Vehicle = 'mower' -- Vehicle model name
 Config.VehicleSpawn = vector4(-42.0131, -412.1090, 40.3985, 69.7127) -- Vehicle spawn location
 ```
