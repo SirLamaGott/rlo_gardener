@@ -1,6 +1,6 @@
 # rlo_gardener
 
-This script offers a dynamic gardening job experience for the ESX Framework in FiveM. Players can take on various gardening tasks, such as weeding, tree trimming, and lawn mowing. The script includes a configurable daily task limit, experience, and payout system, as well as customizable task locations.
+This script offers a dynamic gardening job experience for the ESX Framework in FiveM. Players can take on various gardening tasks, such as weeding, tree trimming, and lawn mowing. The script includes a configurable payout system, as well as customizable task locations.
 
 ## Features
 
@@ -13,18 +13,18 @@ This script offers a dynamic gardening job experience for the ESX Framework in F
 
 1. Download this repository and place it in your FiveM server's resources folder.
 2. Ensure that ESX and MySQL are installed on your server.
-3. Import the `skills_gardening.sql` file into your database to create the required tables.
+3. Import the `gardening.sql` file into your database to create the required tables.
 4. Add the script to your `server.cfg` file:
 
    ```plaintext
-   ensure rlo_gardener
+   ensure gardener-job
    ```
 
-5. Adjust the configuration in the `config.lua` file to meet your server requirements.
+5. Adjust the configuration in the `Config.lua` file to meet your server requirements.
 
 ## Configuration
 
-The configuration is handled via the `config.lua` file. Here are some of the key options:
+The configuration is handled via the `Config.lua` file. Here are some of the key options:
 
 ```lua
 Config = {}
@@ -77,21 +77,21 @@ Config.JobTrees = {
 
 ## SQL Setup
 
-The `skills_gardening.sql` file creates the required database tables. Here’s an example of the table structure:
+The `gardening.sql` file creates the required database tables. Here’s an example of the table structure:
 
 ```sql
-CREATE TABLE `skills_gardening` (
-	`identifier` VARCHAR(46) NOT NULL COLLATE 'latin1_swedish_ci',
-	`experience` INT(11) NOT NULL DEFAULT '0',
-	PRIMARY KEY (`identifier`) USING BTREE
-)
-COLLATE='latin1_swedish_ci'
-ENGINE=InnoDB
-;
+CREATE TABLE IF NOT EXISTS `daily_tasks` (
+    `identifier` VARCHAR(50) NOT NULL,
+    `date` DATE NOT NULL,
+    `tasks` INT NOT NULL DEFAULT 0,
+    PRIMARY KEY (`identifier`, `date`)
+);
+
+ALTER TABLE `users`
+ADD `experience` INT NOT NULL DEFAULT 0 AFTER `money`;
 ```
 
 ## Dependencies
 
 - **[ESX](https://github.com/esx-framework/esx_core):** ESX framework for FiveM.
 - **[oxmysql](https://github.com/overextended/oxmysql):** Asynchronous library for database communication with MySQL.
-- **[ox_lib](https://github.com/overextended/ox_lib):** Asynchronous library for database communication with MySQL.
