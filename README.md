@@ -95,5 +95,5 @@ ADD `experience` INT NOT NULL DEFAULT 0 AFTER `money`;
 
 ## Dependencies
 
-- **[ESX](https://github.com/esx-framework/esx_core):** EssentialMode Extended framework for FiveM.
+- **[ESX](https://github.com/esx-framework/esx_core):** ESX framework for FiveM.
 - **[oxmysql](https://github.com/overextended/oxmysql):** Asynchronous library for database communication with MySQL.
