@@ -1,5 +1,6 @@
 # rlo_gardener
-This script offers a dynamic gardening job experience for the ESX Framework in FiveM. Players can take on various gardening tasks, such as weeding, tree trimming, and lawn mowing. The script includes a experience and level system, and payout system, as well as customizable task locations.
+
+This script offers a dynamic gardening job experience for the ESX Framework in FiveM. Players can take on various gardening tasks, such as weeding, tree trimming, and lawn mowing. The script includes an experience and level system, as well as a payout system, and customizable task locations.
 
 ## Features
 
@@ -7,6 +8,10 @@ This script offers a dynamic gardening job experience for the ESX Framework in F
 - **Experience and Reward System:** Players earn experience points and money for each completed task.
 - **Customizable Vehicle and Zones:** Vehicle and zone positions can be adjusted in the configuration file.
 - **Easy Configuration:** All settings can be customized in the `Config.lua` file.
+
+## Video Demo
+
+Watch the demo of the gardening job script [here](https://youtu.be/LI30zdBjQzI).
 
 ## Installation
 
@@ -93,4 +98,4 @@ ENGINE=InnoDB
 
 - **[ESX](https://github.com/esx-framework/esx_core):** ESX framework for FiveM.
 - **[oxmysql](https://github.com/overextended/oxmysql):** Asynchronous library for database communication with MySQL.
-- **[ox_lib](https://github.com/overextended/ox_lib):** Asynchronous library for database communication with MySQL.
+- **[ox_lib](https://github.com/overextended/ox_lib):** Library for shared functions and utilities.
