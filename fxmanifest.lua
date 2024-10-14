@@ -4,7 +4,7 @@ lua54 'yes'
 
 author 'SirLamaGott'
 description 'Gardener Job'
-version '1.0'
+version '1.1'
 
 shared_scripts {
     '@es_extended/imports.lua',
